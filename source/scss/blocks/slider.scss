@@ -127,6 +127,18 @@
     transition-duration: 1.2s;
     transition-timing-function: easeInOutQuad;
     transition-delay: 760ms;
+
+    @media (max-width: $mobile) and (orientation: landscape) {
+      transition-delay: 0;
+      opacity: 0;
+      transform: translateX(27px);
+    }
+
+    @media (orientation: portrait) {
+      transition-delay: 0;
+      opacity: 0;
+      transform: translateX(27px);
+    }
   }
 
   @media (min-width: $stop-scaling) {
